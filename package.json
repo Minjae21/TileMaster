@@ -1,3 +1,7 @@
 {
-    "tyep" : "module"
+    "compilerOptions": {
+        "allowJs": true,
+        "esModuleInterop": true,
+        "type": "module"
+    }
 }
