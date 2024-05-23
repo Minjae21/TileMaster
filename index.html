@@ -9,15 +9,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TileMaster</title>
     <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <div class="navbar">
             <div class="nav-clock">
                 <p class="nav-rem-text">Remaining time</p>
-                <p class="nav-rem-sec warning">100</p>
+                <p class="nav-rem-sec warning">200</p>
             </div>
             <p id = "wrapper">TileMaster</p></a>
+
+                <div class="help">
+                    <a href = "#popup">
+                    <i class="fa fa-question-circle" style="font-size:30px; color: #dddddd;"></i>
+                </a></div>
+
+                <div id="popup" class = "layer">
+                    <div class="popup-box">
+                        How to Play
+                        <div class="modal-help-wrapper">
+                        <div class="modal-help-container">
+                            <div class="modal-help-col">
+                                <p class="modal-help-col-num">1</p>
+                                <img src = "./IMG/tile1.png" alt="helpimg" class="modal-help-col-img">
+                                <p class="modal-help-desc">If none of the letters in your guess are in the hidden word, their color <b>will not change</b>. If in the wrong position, it will turn <b>yellow</b>.</p>
+                            </div>
+                        </div>
+                        <div class="modal-help-container">
+                            <div class="modal-help-col">
+                                <p class="modal-help-col-num">2</p>
+                                <img src = "./IMG/tile2.png" alt="helpimg" class="modal-help-col-img">
+                                <p class="modal-help-desc">If a letter is in the correct position in the hidden word, it will turn <b>blue</b>.</p>
+                            </div>
+                        </div>
+                        <div class="modal-help-container">
+                            <div class="modal-help-col">
+                                <p class="modal-help-col-num">3</p>
+                                <img src = "./IMG/tile3.png" alt="helpimg" class="modal-help-col-img">
+                                <p class="modal-help-desc">Enter your first five-letter word guess. Remember, plural nouns are not accepted.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                        <a href="#" class = "close">Close</a>
+                    </div>
+                </div>
+
         </div>
     </header>
 
@@ -32,7 +70,11 @@
         <div id="input-info">
             <div class="main-clock">
                 <p class="main-score-text">Remaining chance</p>
-                <p class="main-score warning">9</p>
+                <p class="main-score warning" id="remaining-chance">9</p>
+            </div>
+            <div class="main-restart">
+                <p class="main-score-text">Restart?</p>
+                <p class = "main-re warning" id="restart-button">Press</p>
             </div>
             </div>
 

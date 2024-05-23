@@ -9,6 +9,8 @@ html {
     --emptyWord: #2c363b;
     --textWhite: #dfe7ef;
     --scoreBackground: #164E8E;
+    --reStart: #0d6625;
+    --darkOutLine: #404c55;
 }
 
 :root {
@@ -28,6 +30,8 @@ body {
     justify-content: space-evenly;
     flex-direction: column;
 }
+
+/* nav bar */
 
 .navbar {
     background: var(--lightBackground);
@@ -79,6 +83,130 @@ body {
     font-weight: 600;
     text-indent: 8px;
 }
+
+.help {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    right: 20px;
+    position: absolute;
+}
+
+.layer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.layer .popup-box {
+    position: relative;
+    padding: 20px 20px 60px;
+    margin: 20px;
+    width: 700px;
+    background-color: var(--lightBackground);
+    border-radius: 10px;
+}
+
+.popup-box {
+    color: var(--textWhite);
+    font-size: 24px;
+    margin: 0 0 16px;
+    font-weight: 600;
+}
+
+.modal-help-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.modal-help-container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.modal-help-col {
+    border: 2px solid var(--darkOutLine);
+    border-radius: 12px;
+    flex-direction: column;
+    margin: 0 6px;
+    position: relative;
+    padding-top: 25px;
+    width: 100%;
+    height: 90%;
+}
+
+.modal-help-col-num {
+    border: 2px solid var(--darkOutLine);
+    border-radius: 100px;
+    color: var(--darkOutLine) !important;
+    font-size: 16px !important;
+    font-weight: 700;
+    height: 26px;
+    position: absolute;
+    top: -32px;
+    width: 26px;
+}
+
+.modal-help-col, .modal-help-col-num {
+    align-items: center;
+    background: var(--darkBackground);
+    display: flex;
+    justify-content: center;
+}
+
+.modal-help-col-img {
+    height: 100%;
+    width: 80%;
+    object-fit: contain;
+}
+
+.modal-help-desc {
+    color: var(--textWhite);
+    text-align: center;
+    font-size: 14px !important;
+    font-weight: 300;
+    margin: 20px 10px !important;
+}
+
+.layer .popup-box .close {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+  }
+
+.layer:target {
+    display: flex;
+    animation: open 0.5s;
+  }
+
+@keyframes open {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+/* main game */
 
 #game {
     display: grid;
@@ -166,4 +294,30 @@ body {
     margin: 0;
     padding: 8px 10px;
     transition: all .25s ease;
+}
+
+/** re-start button **/
+.main-restart {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+}
+
+.main-re {
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    padding: 8px 10px;
+    transition: all .25s ease;
+}
+
+.main-re.warning {
+    background: var(--reStart);
+    border: 2px solid #1bbe47;
+    color: #1bbe47;
 }
