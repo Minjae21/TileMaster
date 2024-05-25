@@ -321,3 +321,15 @@ body {
     border: 2px solid #1bbe47;
     color: #1bbe47;
 }
+
+.footer-c {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+    color:  rgba(224, 211, 211, 0.735);
+  }
+
+  .footer-cc {
+    color:  rgba(224, 211, 211, 0.735);
+  }
