@@ -1,5 +1,5 @@
 # TileMaster Game
-TileMaster Game is a word-guessing game where players aim to guess a secret 5-letter word within a limited attempts.<br>Each guess provides feedback to help narrow down the possibilities.
+TileMaster Game is a word-guessing game where players aim to guess a secret 5-letter word within a limited attempts. Each guess provides feedback to help narrow down the possibilities.
 
 **Created by Minjae Jang** (csjae21@gmail.com)<br>
 **Link to project:** https://fantastic-madeleine-2f6761.netlify.app/#
