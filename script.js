@@ -23,12 +23,12 @@ function updateGrid() {
 }
 
 function drawBox(container, row, col, letter = '') { // creating the box
-    const box = document.createElement('div');
+    const box = document.createElement('div'); // creating div element named box
     box.className = 'box';
     box.id = `box${row}${col}`;
-    box.textContent = letter;
+    box.textContent = letter; // text content only letters
 
-    container.appendChild(box);
+    container.appendChild(box); // append it to the container
     return box;
 }
 
@@ -39,11 +39,11 @@ function drawGrid(container) {
 
     for(let i = 0; i < 9; i++) { // rows
         for(let j = 0; j < 5; j++) {   // cols
-            drawBox(grid, i, j);
+            drawBox(grid, i, j); // draw a box for each container
         }
     }
 
-    container.appendChild(grid);
+    container.appendChild(grid); // append grid to the container
 }
 
 function startTimer() {
@@ -53,7 +53,7 @@ function startTimer() {
             document.querySelector('.nav-rem-sec').textContent = state.timeRemaining;
             if (state.timeRemaining <= 0) {
                 clearInterval(state.timer);
-                alert('Time is up! Game Over.');
+                alert(`Time is up! Game Over. The answer was ${state.secret}.`);
                 stopGame();
             }
         }, 1000);
